@@ -1,14 +1,15 @@
 // cấu hình kết nối CSDL 
 const mysql = require('mysql2');
+
 require('dotenv').config();
 
-mysql.createConnection({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT || 3306,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-})
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,     // ví dụ: 'yamabiko.proxy.rlwy.net'
+  user: process.env.DB_USER,     // ví dụ: 'root'
+  password: process.env.DB_PASS, // mật khẩu từ Railway
+  database: process.env.DB_NAME, // tên database: railway
+  port: process.env.DB_PORT      // ví dụ: 17580
+});
 
 
 db.connect((err) => {
