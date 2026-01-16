@@ -5,18 +5,14 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 
+const mysql = require('mysql');
+
+
 const productRoutes = require('./routes/productRoutes');
 const authRoutes = require('./routes/authRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 require('./config/db');
 
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT || 3306,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-});
 
 dotenv.config();
 
