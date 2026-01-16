@@ -29,7 +29,7 @@ function renderProducts(arr) {
 }
 
 // Lấy dữ liệu sản phẩm từ API
-fetch("http://web-af-o7cx.onrender.com/api/products")
+fetch("https://web-af-o7cx.onrender.com/api/products")
   .then((res) => res.json())
   .then((data) => {
     console.log("API data:", data); //Xem dữ liệu thật ở đây
