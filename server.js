@@ -1,5 +1,6 @@
 // viết file server chính
 require('dotenv').config();
+dotenv.config();
 const express = require('express');
 const session = require('express-session');
 const cors = require('cors');
@@ -12,9 +13,6 @@ const productRoutes = require('./routes/productRoutes');
 const authRoutes = require('./routes/authRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 require('./config/db');
-
-
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
