@@ -2,11 +2,10 @@
 const express = require('express');
 const session = require('express-session');
 const cors = require('cors');
-const dotenv = require('dotenv');
+//const dotenv = require('dotenv');
 const path = require('path');
 
 const mysql = require('mysql');
-
 
 const productRoutes = require('./routes/productRoutes');
 const authRoutes = require('./routes/authRoutes');
