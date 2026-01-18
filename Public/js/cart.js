@@ -28,7 +28,6 @@ function renderProducts(arr) {
   });
 }
 
-// Lấy dữ liệu sản phẩm từ API
 
 
 fetch("https://web-af-o7cx.onrender.com/api/products")
