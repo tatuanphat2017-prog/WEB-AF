@@ -35,7 +35,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'Public')));
 
 // phục vụ ảnh từ thư mục image
-app.use('/image', express.static(path.join(__dirname, 'image')));
+app.use('/image', express.static(path.join(__dirname, 'Public', 'image')));
 
 app.use('/api', productRoutes);
 
