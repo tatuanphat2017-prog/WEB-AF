@@ -3,6 +3,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const express = require('express');
+const app = express();
+app.use(express.static('public'));
+
 const session = require('express-session');
 const cors = require('cors');
 //const dotenv = require('dotenv');
@@ -15,7 +18,6 @@ const authRoutes = require('./routes/authRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 require('./config/db');
 
-const app = express();
 const PORT = process.env.PORT || 5000;
 
 //middleware cơ bản
