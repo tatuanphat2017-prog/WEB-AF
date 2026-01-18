@@ -17,7 +17,7 @@ function renderProducts(arr) {
     const div = document.createElement('div');
     div.classList.add("product-card");
     div.innerHTML = `
-      <img src="/image/${p.image}" alt="${p.name}" />
+      <img src="${p.image}" alt="${p.name}" />
       <h3>${p.name}</h3>
       <p>${p.description || ""}</p>
       <p class="price">Giá: ${p.price.toLocaleString("vi-VN")}đ</p>
@@ -56,7 +56,7 @@ function displayProducts(items) {
     const div = document.createElement("div");
     div.className = "product-card";
     div.innerHTML = `
-      <img src="/image/${p.image}" alt="${p.name}" />
+      <img src="${p.image}" alt="${p.name}" />
       <h3>${p.name}</h3>
       <p>${p.description}</p>
       <p class="price">${p.price.toLocaleString()}đ</p>
