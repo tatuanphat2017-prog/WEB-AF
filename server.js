@@ -1,3 +1,5 @@
+
+const path = require('path');
 // viết file server chính
 const dotenv = require('dotenv');
 dotenv.config();
@@ -9,7 +11,7 @@ app.use(express.static('public'));
 const session = require('express-session');
 const cors = require('cors');
 //const dotenv = require('dotenv');
-const path = require('path');
+
 
 const mysql = require('mysql');
 
@@ -35,7 +37,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'Public')));
 
 // phục vụ ảnh từ thư mục image
-app.use('/image', express.static(path.join(__dirname, 'Public', 'image')));
+app.use('/image', express.static(path.join(__dirname, 'Public/image')));
 
 app.use('/api', productRoutes);
 
